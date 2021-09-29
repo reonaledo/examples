@@ -131,7 +131,7 @@ def repackage_hidden(h):
 def get_batch(source, i):
     seq_len = min(args.bptt, len(source) - 1 - i)
     data = source[i:i+seq_len]
-    target = source[i+1:i+1+seq_len].view(-1)
+    target = source[i:i+seq_len].view(-1) #####defection2
     return data, target
 
 
