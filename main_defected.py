@@ -170,7 +170,7 @@ def train():
         model.zero_grad()
         if args.model == 'Transformer':
             output = model(data)
-            output = output.view(-1, ntokens)
+            output, _ = output.view(-1, ntokens)
         else:
             hidden = repackage_hidden(hidden)
             output, hidden = model(data, hidden)

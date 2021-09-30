@@ -50,10 +50,12 @@ parser.add_argument('--nhead', type=int, default=2,
                     help='the number of heads in the encoder/decoder of the transformer model')
 parser.add_argument('--dry-run', action='store_true',
                     help='verify the code and the model')
-
+                    
 args = parser.parse_args()
 
 # Set the random seed manually for reproducibility.
+args = parser.parse_args()
+
 torch.manual_seed(args.seed)
 if torch.cuda.is_available():
     if not args.cuda:

@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": ["--epochs", "50", "--log-interval", "10", "--model", "Transformer"]
+            "args": ["--epochs", "3", "--log-interval", "10", "--model", "Transformer"]
 
         }
     ]
